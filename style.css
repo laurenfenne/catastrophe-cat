@@ -47,6 +47,7 @@ body {
     gap: 20px;
     box-shadow: 0 8px 25px 10px rgba(133, 112, 124, 0.5);
     max-width: 60%;
+    max-height: 90%;
 }
 
 .btn-grid {
