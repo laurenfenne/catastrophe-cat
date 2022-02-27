@@ -6,12 +6,22 @@
     font-family: Merriweather;
 }
 
-h1 {
+h1, h2 {
     font-family: Amatic SC;
-    font-size: 4.5vw;
     font-weight: 700;
     color: rgb(75, 32, 7);
     margin: 0;
+}
+
+h1 {
+    margin-bottom: -2.5vmin;
+    font-size: 4vw;
+}
+
+h2 {
+    margin-top: -2.5vmin;
+    margin-bottom: 0;
+    font-size: 3vw;
 }
 
 body {
@@ -19,7 +29,7 @@ body {
     margin: 0;
     padding: 0;
     color: rgb(75, 32, 7);
-    font-size: 2.5vmin;
+    font-size: 2.25vmin;
 }
 
 #img img{
@@ -46,6 +56,8 @@ body {
     align-items: center;
     gap: 20px;
     box-shadow: 0 8px 25px 10px rgba(133, 112, 124, 0.5);
+    width: 60%;
+    height: 90%;
     max-width: 60%;
     max-height: 90%;
 }
@@ -62,7 +74,7 @@ body {
     border: 1px solid hsl(313, 100%, 85%);
     border-radius: 5px;
     padding: 5px 10px;
-    font-size: 3vmin;
+    font-size: 2.75vmin;
     color:rgb(75, 32, 7);
     outline: none;
     transition: background-color 200ms ease-in-out;
