@@ -118,6 +118,10 @@ const textNodes = [
                 nextText: 7,
             },
         ]
+    },
+    {
+        id: 7,
+        text: "",
     }
 
 ]
