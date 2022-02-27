@@ -44,38 +44,50 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: "You wake up in a small cage on a bed of old ragged blankets.  It is very dark, but you can make out a bowl of water and a bowl of food next to your bed. You can hear snuffles and squeaks echoing through the room. The air is pungent with the scent of other animals.",
+        text: "You wake up in a small cage on a bed of old ragged blankets.  It is very dark, but with your cat vision you can see quite easily. There's a bowl of food and water and a toy ball next to your bed. You can hear snuffles and squeaks echoing through the room. The air is pungent with the scent of other animals.",
         options: [
             {
-                text: "Take the goo",
+                text: "Take the ball",
+                requiredState: (currentState) => !(currentState.goo),
                 setState: {goo: true },
                 nextText: 2,
             },
             {
-                text: "Leave the goo",
-                nextText: 2,
+                text: "Go to the cage door",
+                nextText: 3,
 
             }
         ]
     },
     {
-        id: 2,
-        text: "You notice another cat in a cage of its own across the room. It has a sword! Whaaat!",
+        id: 3,
+        text: "You notice another cat in a cage of its own across the room. It has a lockpick! Whaaat!",
         options: [
             {
                 text: "Meow loudly",
                 nextText: 4,
             },
             {
-                text: "Trade the good for the sword",
+                text: "Trade the ball for the lockpick",
                 requiredState: (currentState) => currentState.goo,
-                setState: {goo: false, sword: true},
-                nextText: 3,
+                setState: {goo: false, lockpick: true},
+                nextText: 5,
+            },
+            {
+                text: "Examine the cage door",
+                nextText: 5,
             },
         ],
     },
     {
-        id: 3,
+        id: 2,
+        text: "OK, you take the ball and put in your, err, bag...?",
+        options: [
+            {
+                text: "Go to the cage door",
+                nextText: 3,
+            }
+        ]
     },
     {
         id: 4,
@@ -85,6 +97,26 @@ const textNodes = [
                 text: 'Restart',
                 nextText: -1,
             }
+        ],
+    },
+    {
+        id: 5,
+        text: "You look more closely at the cage door. You see a lock, and on the outside of the door you notice a latch that appears to be activated by moving it up and down. You could probably reach it with your paw through the bars of the cage...",
+        options: [
+            {
+                text: "Meow loudly",
+                nextText: 4,
+            },
+            {
+                text: "Pick the lock",
+                requiredState: (currentState) => currentState.lockpick,
+                //setState: {goo: false, lockpick: true},
+                nextText: 6,
+            },
+            {
+                text: "Play with the latch!",
+                nextText: 7,
+            },
         ]
     }
 
