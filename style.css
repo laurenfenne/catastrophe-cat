@@ -14,12 +14,12 @@ h1, h2 {
 }
 
 h1 {
-    margin-bottom: -2.5vmin;
+    margin-bottom: -2.25vmin;
     font-size: 4vw;
 }
 
 h2 {
-    margin-top: -2.5vmin;
+    margin-top: -2.25vmin;
     margin-bottom: 0;
     font-size: 3vw;
 }
